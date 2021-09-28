@@ -3,7 +3,7 @@
     name: "{{ item }}"
     state: latest
   with_items:
-    - "{{ VAR_packages }}“
+    - "{{ VAR_packages }} "
 
 - name: Check yum list
   shell: yum list installed | grep "{{ item }}"
