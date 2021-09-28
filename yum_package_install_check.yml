@@ -4,6 +4,7 @@
     state: latest
   with_items:
     - "{{ VAR_packages }} "
+
 - name: Check yum list
   shell: yum list installed | grep "{{ item }}"
   register: result
