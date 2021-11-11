@@ -1,15 +1,3 @@
-- hosts: all
-  connection: local
-  gather_facts: false
-  tasks:
-  - name: pause
-    pause:
-      seconds: 30
-    register: result
-  - name: show result
-    debug:
-      var: result
-      
 - name: install the latest version of packages
   yum:
     name: "{{ item }}"
